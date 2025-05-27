@@ -2,13 +2,18 @@ using System.Linq;
 
 namespace ControleViagensApi.Models
 {
+    // Classe estática responsável por popular o banco de dados com dados iniciais (seed)
     public static class SeedViagens
     {
+        // Método que realiza a inserção dos dados iniciais no contexto do banco de dados
         public static void Seed(ViagensContext context)
         {
+            // Verifica se já existem viagens cadastradas no banco
             if (!context.Viagens.Any())
             {
+                // Adiciona uma lista de viagens pré-definidas ao contexto
                 context.Viagens.AddRange(
+                    // Cada objeto Viagem representa um registro na tabela Viagens
                     new Viagem { Destino = "Rio de Janeiro", DataPartida = DateTime.Parse("2024-06-01"), DataRetorno = DateTime.Parse("2024-06-07"), Preco = 1200.00, NomeViajante = "João Silva" },
                     new Viagem { Destino = "São Paulo", DataPartida = DateTime.Parse("2024-06-05"), DataRetorno = DateTime.Parse("2024-06-10"), Preco = 900.00, NomeViajante = "Maria Souza" },
                     new Viagem { Destino = "Salvador", DataPartida = DateTime.Parse("2024-06-10"), DataRetorno = DateTime.Parse("2024-06-17"), Preco = 1500.00, NomeViajante = "Carlos Oliveira" },
