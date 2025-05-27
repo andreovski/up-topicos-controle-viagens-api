@@ -1,0 +1,13 @@
+# Visual Studio
+.vs/
+# Build results
+[Dd]ebug/
+[Rr]elease/
+# Visual Studio Code
+.vscode/
+# Rider
+.idea/
+# NuGet packages
+*.nupkg
+# Database
+*.db
