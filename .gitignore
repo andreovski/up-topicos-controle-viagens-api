@@ -9,5 +9,3 @@
 .idea/
 # NuGet packages
 *.nupkg
-# Database
-*.db

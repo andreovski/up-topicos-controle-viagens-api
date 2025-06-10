@@ -20,5 +20,9 @@ namespace ControleViagensApi.Models
 
         [Range(0, double.MaxValue)]
         public double Preco { get; set; }
+
+        public DateTime DataCriacao { get; set; }
+
+        public DateTime DataAtualizacao { get; set; }
     }
 }

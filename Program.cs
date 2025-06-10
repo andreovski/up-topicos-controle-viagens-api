@@ -7,10 +7,22 @@ var builder = WebApplication.CreateBuilder(args); // Cria o builder para configu
 builder.Services.AddDbContext<ViagensContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Adiciona suporte a controllers para a API
 builder.Services.AddControllers();
 
 var app = builder.Build(); // Constrói a aplicação
+
+app.UseCors(); // Habilita o CORS (Cross-Origin Resource Sharing) para permitir requisições de diferentes origens
 
 // Garante que o banco de dados será criado ao iniciar a aplicação e executa o seed de dados
 using (var scope = app.Services.CreateScope())

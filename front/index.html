@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">🌍 Sistema de viagens</a>
+      <ul class="navbar-links">
+        <li><a href="index.html" class="active">Dashboard</a></li>
+        <li><a href="cadastro-viagens.html">Gestão de Viagens</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <button class="primary">
+      <a href="./cadastro-viagens.html">✈️ Cadastrar viagens</a>
+    </button>
+
+    <section class="dashboard">
+      <h2>📊 Dashboard</h2>
+      <div class="dashboard-cards">
+        <div class="dashboard-card">
+          <span class="dashboard-label">Total de Viagens</span>
+          <span class="dashboard-value" id="total-viagens">0</span>
+        </div>
+        <div class="dashboard-card">
+          <span class="dashboard-label">Valor Total das Viagens</span>
+          <span class="dashboard-value" id="valor-total">R$ 0,00</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <script type="module" src="./js/dashboard.js"></script>
+  </main>
+
+
+</body>
+</html>
